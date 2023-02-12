@@ -39,7 +39,7 @@
 /**
  * CPU 时钟频率设置：GD32F150 是 72MHz
  */
-#define configCPU_CLOCK_HZ ((unsigned long) SystemCoreClock)
+#define configCPU_CLOCK_HZ ((unsigned long)SystemCoreClock)
 
 /**
  * 此参数用于定义系统时钟节拍数，单位Hz，一般取1000Hz即可。
@@ -79,6 +79,15 @@
  * TickType_t定义的就是32位无符号数。对于32位架构的处理器，一定要禁止此宏定义，即设置此宏定义数值为0即可。而16位无符号数类型主要用于8位和16位架构的处理器。
  */
 #define configUSE_16_BIT_TICKS 0
+
+/**
+ * 定时器配置
+ */
+#define configUSE_TIMERS 1                                          /* 1 启用软件定时器 */
+#define configTIMER_TASK_PRIORITY (configMAX_PRIORITIES - 1)        /* 软件定时器优先级 */
+#define configTIMER_QUEUE_LENGTH 5                                  /* 软件定时器队列长度 */
+#define configTIMER_TASK_STACK_DEPTH (configMINIMAL_STACK_SIZE * 2) /* 软件定时器任务堆栈大小 */
+#define configSUPPORT_DYNAMIC_ALLOCATION 1
 
 /**
  * 此参数用于使能与空闲任务同优先级的任务，只有满足以下两个条件时，此参数才有效果：
