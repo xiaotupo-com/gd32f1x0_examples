@@ -1,0 +1,15 @@
+/**
+ * @file		oled_iic.h
+ * @brief		GD32 OLED 驱动头文件
+ * @author		小土坡
+ * @version		v0.01
+ * @createdate	2023-3-13
+ * @update		更新日期
+ * @license		
+ * @github		https://github.com/xiaotupo-com
+ * @note
+ */
+#ifndef __OLED_IIC_H
+#define __OLED_IIC_H
+
+#endif /* __OLED_IIC_H */
